@@ -1,3 +1,6 @@
+<?php
+    // Added A PHP
+?>
 <!-- index.php -->
 <!DOCTYPE html>
 <html lang="en">
@@ -111,44 +114,57 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
- <!-- Enhanced Contact Section -->
-<section id="contact" class="section bg-gradient-to-br from-white via-blue-50 to-indigo-50 text-gray-800 fade-in">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-4xl font-semibold text-indigo-700 text-center mb-6">Let’s Connect</h3>
-    <p class="text-gray-700 text-lg text-center mb-12">Have questions, feedback, or ideas to share? We'd love to hear from you. Just drop us a message below.</p>
+  <!-- ✅ Contact Section -->
+ <section id="contact" class="min-h-screen pb-20 bg-gradient-to-br from-white via-blue-50 to-indigo-50 text-gray-800 fade-in">
+  <div class="w-full h-full flex flex-col">
+    
+    <!-- Heading -->
+    <div class="text-center px-4 pt-8">
+      <h3 class="text-4xl font-semibold text-indigo-700 mb-2">Let’s Connect</h3>
+      <p class="text-gray-700 text-lg">Have questions, feedback, or ideas to share? We'd love to hear from you.</p>
+    </div>
 
-    <div class="md:flex md:space-x-8">
-      <!-- Contact Image -->
-      <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
-        <img src="./images/Contact-Us-Image.jpg" alt="Contact Us" class="max-w-sm w-full rounded-xl shadow-lg" />
+    <!-- Main Grid -->
+    <div class="flex-1 flex flex-col md:flex-row items-stretch mt-6 md:mt-0 md:gap-6 px-4 md:px-12">
+      
+      <!-- Left Image -->
+      <div class="md:w-1/2 w-full h-1/2 md:h-full flex-shrink-0 rounded-lg overflow-hidden shadow-md">
+        <img src="./images/Contact-Us-Image.jpg" alt="Contact Us"
+             class="w-full h-full object-cover object-center" />
       </div>
 
-      <!-- Contact Form -->
-      <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-xl transition hover:shadow-2xl">
-        <form action="#" method="post" class="space-y-6">
-          <div>
-            <label class="block text-left font-medium mb-1">Your Name</label>
-            <input type="text" name="name" placeholder="John Doe" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-          </div>
-          <div>
-            <label class="block text-left font-medium mb-1">Your Email</label>
-            <input type="email" name="email" placeholder="you@example.com" required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-          </div>
-          <div>
-            <label class="block text-left font-medium mb-1">Your Message</label>
-            <textarea name="message" rows="4" placeholder="Type your message here..." required class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
-        </form>
+      <!-- Right Form -->
+      <div class="md:w-1/2 w-full h-1/2 md:h-full bg-white p-6 md:p-12 flex flex-col justify-center rounded-lg shadow-md">
+        <div class="w-full max-w-lg mx-auto h-full flex flex-col justify-center max-h-full">
+          <form action="#" method="post" class="space-y-6 flex-grow">
+            <div>
+              <label class="block text-left font-medium mb-1">Your Name</label>
+              <input type="text" name="name" placeholder="Enter Your Name" required
+                     class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label class="block text-left font-medium mb-1">Your Email</label>
+              <input type="email" name="email" placeholder="Enter Your Email" required
+                     class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div>
+              <label class="block text-left font-medium mb-1">Your Message</label>
+              <textarea name="message" rows="4" placeholder="Type your message here..." required
+                        class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <button type="submit"
+                    class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+          </form>
 
-        <!-- Quick Contact Info -->
-        <div class="mt-8 text-left space-y-2 text-sm text-gray-600">
-          <p><strong>Email:</strong> <a href="mailto:intellitask@example.com" class="text-indigo-600 hover:underline">intellitask@example.com</a></p>
-          <p><strong>Phone:</strong> +977-9800000000</p>
-          <p><strong>Location:</strong> Kathmandu, Nepal</p>
+          <!-- Contact Info -->
+          <div class="mt-6 text-sm text-gray-600">
+            <p><strong>Email:</strong> <a href="mailto:smctu444@gmail.com" class="text-indigo-600 hover:underline">smctu444@gmail.com</a></p>
+            <p><strong>Phone:</strong> +977-9800000000</p>
+            <p><strong>Location:</strong> Kathmandu, Nepal</p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
