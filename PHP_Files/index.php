@@ -10,46 +10,23 @@
   <title>IntelliTask - AI Task Management</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/@heroicons/vue@2.0.16/outline/index.min.js" defer></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .nav-blur {
-      backdrop-filter: blur(12px);
-      background-color: rgba(255, 255, 255, 0.7);
-    }
-    .section {
-      min-height: 100vh;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-in-out forwards;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="font-sans text-gray-800 bg-gradient-to-br from-indigo-50 to-blue-100">
 <!-- Navbar -->
 <header class="fixed top-0 left-0 w-full z-50 nav-blur shadow-md bg-white">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
     <!-- Logo -->
-    <h1 class="text-2xl font-bold text-indigo-700">IntelliTask</h1>
+    <h1 class="text-4xl font-bold text-indigo-700">IntelliTask</h1>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <a href="#home" class="hover:text-indigo-600">Home</a>
-      <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#features" class="hover:text-indigo-600">Features</a>
-      <a href="#contact" class="hover:text-indigo-600">Contact</a>
-    </nav>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex space-x-9 text-indigo-700 font-medium ">
+  <a href="#home" class="nav-underline" style="font-size: 20px;">Home</a>
+  <a href="#about" class="nav-underline" style="font-size: 20px;">About</a>
+  <a href="#features" class="nav-underline" style="font-size: 20px;">Features</a>
+  <a href="#contact" class="nav-underline" style="font-size: 20px;">Contact</a>
+</nav>
 
     <!-- Desktop Buttons -->
     <div class="space-x-4 hidden md:block">
@@ -167,7 +144,7 @@
 
     <!-- Heading -->
     <div class="text-center px-4 pt-24 md:pt-20">
-      <h3 class="text-4xl font-semibold text-indigo-700 mb-2">Let’s Connect</h3>
+      <h3 class="text-4xl font-semibold text-indigo-700 mb-2">Let’s Connect 🤍</h3>
       <p class="text-gray-700 text-lg mb-4">Have questions, feedback, or ideas to share? We'd love to hear from you.</p>
     </div>
 
@@ -221,7 +198,7 @@
   </footer>
 
   <!-- JavaScript Logic for "Hamburger" in the navbar. -->
-  <script>
+<script>
   const toggleBtn = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
