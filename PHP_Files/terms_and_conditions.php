@@ -38,7 +38,7 @@
     </p>
 
     <div class="mt-8">
-      <a href="signup.php" class="text-indigo-600 hover:underline">&larr; Go Back</a>
+      <a href="signup_form.php" class="text-indigo-600 hover:underline">&larr; Go Back</a>
     </div>
   </div>
 </body>
