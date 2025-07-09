@@ -30,7 +30,7 @@
 
     <!-- Desktop Buttons -->
     <div class="space-x-4 hidden md:block">
-      <a href="signup.php" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Sign Up</a>
+      <a href="signup_form.php" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Sign Up</a>
       <a href="login.php" class="px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100 transition">Log In</a>
     </div>
 
@@ -49,10 +49,10 @@
       <a href="#contact" class="hover:text-indigo-600">Contact</a>
     </nav>
     <div class="mt-4 space-y-2">
-      <a href="signup.php" class="block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Sign Up</a>
+      <a href="signup_form.php" class="block w-full text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Sign Up</a>
       <a href="login.php" class="block w-full text-center px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100 transition">Log In</a>
     </div>
-  </div>
+  </div>  
 </header>
 
 
@@ -60,7 +60,7 @@
   <section id="home" class="section flex flex-col items-center justify-center text-center px-6 fade-in">
     <h2 class="text-5xl md:text-6xl font-bold text-indigo-800 mb-4 leading-tight">AI-Powered Task Mastery</h2>
     <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mb-8">Plan smart. Work efficiently. Let IntelliTask guide your productivity journey with intelligent automation.</p>
-    <a href="signup.php" class="px-8 py-4 bg-indigo-600 text-white text-lg rounded-lg hover:bg-indigo-700 transition transform hover:scale-105">Start Your Journey</a>
+    <a href="signup_form.php" class="px-8 py-4 bg-indigo-600 text-white text-lg rounded-lg hover:bg-indigo-700 transition transform hover:scale-105">Start Your Journey</a>
   </section>
 
 <!-- About Section -->
