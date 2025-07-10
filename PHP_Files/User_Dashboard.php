@@ -20,15 +20,16 @@
   <!-- Sidebar -->
   <aside class="fixed top-0 left-0 h-full w-64 bg-indigo-700 text-white z-40 hidden lg:block">
     <div class="p-6 text-2xl font-bold">IntelliTask</div>
-    <nav class="space-y-2 p-4">
-      <a href="#dashboard" class="block px-4 py-2 rounded hover:bg-indigo-600">Dashboard</a>
-      <a href="#tasks" class="block px-4 py-2 rounded hover:bg-indigo-600">My Tasks</a>
-      <a href="#insights" class="block px-4 py-2 rounded hover:bg-indigo-600">AI Insights</a>
-      <a href="#notifications" class="block px-4 py-2 rounded hover:bg-indigo-600">Notifications</a>
-      <a href="#profile" class="block px-4 py-2 rounded hover:bg-indigo-600">Profile & Settings</a>
-      <a href="#support" class="block px-4 py-2 rounded hover:bg-indigo-600">Help & Support</a>
-      <a href="#logout" class="block px-4 py-2 rounded hover:bg-red-600">Logout</a>
-    </nav>
+ <nav class="space-y-4 p-4">
+  <a href="#dashboard" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Dashboard</a>
+  <a href="#tasks" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">My Tasks</a>
+  <a href="#insights" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">AI Insights</a>
+  <a href="#notifications" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Notifications</a>
+  <a href="#profile" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Profile & Settings</a>
+  <a href="#support" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Help & Support</a>
+  <a href="#logout" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Logout</a>
+</nav>
+
   </aside>
 
   <!-- Mobile Hamburger -->
@@ -59,38 +60,38 @@
   <!-- Dashboard Content -->
   <main class="flex-1 lg:ml-64 overflow-y-auto">
     <section id="dashboard" class="min-h-screen p-8 bg-white shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Dashboard</h2>
-      <p>Welcome to your IntelliTask dashboard. Quick overview of your task stats and progress will be shown here.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Dashboard</h2>
+      <?php include 'User_Dashboard_Sections/dashboard_home.php'; ?>
     </section>
 
     <section id="tasks" class="min-h-screen p-8 bg-gray-50 shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">My Tasks</h2>
-      <p>Here you'll manage your tasks with deadlines, priorities, and progress tracking.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">My Tasks</h2>
+      <?php include 'User_Dashboard_Sections/my_tasks_section.php'; ?>
     </section>
 
     <section id="insights" class="min-h-screen p-8 bg-white shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">AI Insights</h2>
-      <p>This section will show smart suggestions and AI-driven task recommendations.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">AI Insights</h2>
+      <?php include 'User_Dashboard_Sections/insights_section.php'; ?>
     </section>
 
     <section id="notifications" class="min-h-screen p-8 bg-gray-50 shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Notifications</h2>
-      <p>Your task reminders and system updates will appear here.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Notifications</h2>
+      <?php include 'User_Dashboard_Sections/notifications_section.php'; ?>
     </section>
 
     <section id="profile" class="min-h-screen p-8 bg-white shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Profile & Settings</h2>
-      <p>Update your account info, password, timezone, preferences, and more.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Profile & Settings</h2>
+      <?php include 'User_Dashboard_Sections/profile_section.php'; ?>
     </section>
 
     <section id="support" class="min-h-screen p-8 bg-gray-50 shadow-inner">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Help & Support</h2>
-      <p>Frequently asked questions, documentation, and support contact info.</p>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Help & Support</h2>
+      <?php include 'User_Dashboard_Sections/support_section.php'; ?>
     </section>
 
     <section id="logout" class="min-h-screen p-8 bg-white shadow-inner">
-      <h2 class="text-3xl font-bold text-red-600 mb-4">Logout</h2>
-      <p>Click to securely log out from IntelliTask.</p>
+      <h2 class="text-3xl text-center font-bold text-red-600 mb-4">Logout</h2>
+      <?php include 'User_Dashboard_Sections/logout_section.php'; ?>
     </section>
   </main>
 
