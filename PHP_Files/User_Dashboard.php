@@ -61,32 +61,32 @@
   <main class="flex-1 lg:ml-64 overflow-y-auto">
     <section id="dashboard" class="min-h-screen p-8 bg-white shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Dashboard</h2>
-      <?php include 'User_Dashboard_Sections/dashboard_home.php'; ?>
+      <?php include 'User_Dashboard_Sections/Dashboard_Home_Section/dashboard_home.php'; ?>
     </section>
 
     <section id="tasks" class="min-h-screen p-8 bg-gray-50 shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">My Tasks</h2>
-      <?php include 'User_Dashboard_Sections/my_tasks_section.php'; ?>
+      <?php include 'User_Dashboard_Sections/My_Task_Section/my_tasks_section.php'; ?>
     </section>
 
     <section id="insights" class="min-h-screen p-8 bg-white shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">AI Insights</h2>
-      <?php include 'User_Dashboard_Sections/insights_section.php'; ?>
+      <?php include 'User_Dashboard_Sections/Insights_Section/insights_section.php'; ?>
     </section>
 
     <section id="notifications" class="min-h-screen p-8 bg-gray-50 shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Notifications</h2>
-      <?php include 'User_Dashboard_Sections/notifications_section.php'; ?>
+      <?php include 'User_Dashboard_Sections/Notifications_Section/notifications_section.php'; ?>
     </section>
 
     <section id="profile" class="min-h-screen p-8 bg-white shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Profile & Settings</h2>
-      <?php include 'User_Dashboard_Sections/profile_section.php'; ?>
+      <?php include 'User_Dashboard_Sections/Profile_Section/profile_section.php'; ?>
     </section>
 
     <section id="support" class="min-h-screen p-8 bg-gray-50 shadow-inner">
       <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Help & Support</h2>
-      <?php include 'User_Dashboard_Sections/support_section.php'; ?>
+      <?php include 'User_Dashboard_Sections/Support_Section/support_section.php'; ?>
     </section>
 
     <section id="logout" class="min-h-screen p-8 bg-white shadow-inner">
