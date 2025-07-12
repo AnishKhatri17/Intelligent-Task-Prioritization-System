@@ -1,5 +1,11 @@
 <?php
-    //echo "Welcome to User Dashbaord";
+    session_start();
+
+    // Okay, enusuring that only logged-in users can access the dashboard
+    if(!isset($_SESSION['user_id'])){
+        header("Location: /ProjectIII/PHP_Files/login.php");
+        exit();
+    }
 ?>  
 
 <!DOCTYPE html>
