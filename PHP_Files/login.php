@@ -92,5 +92,19 @@
         }
     });
     </script>
+
+  <!-- PHP CODE Logic for auto session expire for user inactivity -->
+   <?php if(isset($_GET['session_expired'])) : ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      Swal.fire({
+        icon: 'info',
+        title: 'Session Expired!',
+        text: 'You were inactive for too long. Please log in again.',
+        color: '#1e1b4b', // Darker Text Color for more good looking
+        confirmButtonColor: '#6366f1' // indigo-500
+      });
+    </script>
+  <?php endif; ?>
 </body>
 </html>
