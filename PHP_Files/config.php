@@ -7,7 +7,7 @@ $conn = mysqli_connect('localhost','root','','intellitask');
 
         else
         {
-            echo ("Database connected successfully.");
+            echo ("");
             // echo ("");
         }
 ?>
