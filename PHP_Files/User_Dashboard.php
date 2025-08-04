@@ -1,6 +1,20 @@
 <?php
     session_start();
 
+    // Auto Logout after 2 hours (2 hours is 7200 seconds) of inactiivity 
+    $timeout = 7200;
+
+    if(isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout){
+      // Session expired due to inactivity
+      session_unset(); // Okay, Unset all session variables
+      session_destroy(); // Now, Destroy the session
+      header("Location: /ProjectIII/PHP_Files/login.php?session_expired=1"); // Redirect to login page
+      exit();
+    }
+
+    // update the user last activity time
+    $_SESSION['last_activity'] = time();
+
     // Okay, enusuring that only logged-in users can access the dashboard
     if(!isset($_SESSION['user_id'])){
         header("Location: /ProjectIII/PHP_Files/login.php");
@@ -33,7 +47,7 @@
   <a href="#notifications" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Notifications</a>
   <a href="#profile" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Profile & Settings</a>
   <a href="#support" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Help & Support</a>
-  <a href="#logout" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Logout</a>
+  <a href="#" onclick="confirmLogout()" class="block w-full text-center px-4 py-3 bg-indigo-900 hover:bg-indigo-400 hover:ring-2 hover:ring-indigo-300 hover:scale-105 transform rounded-xl shadow-md text-white font-medium transition-all duration-200 ease-in-out">Logout</a>  
 </nav>
 
   </aside>
@@ -66,7 +80,7 @@
   <!-- Dashboard Content -->
   <main class="flex-1 lg:ml-64 overflow-y-auto">
     <section id="dashboard" class="min-h-screen p-8 bg-white shadow-inner">
-      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">Dashboard</h2>
+      <h2 class="text-3xl text-center font-bold text-indigo-700 mb-4">IntelliTask Dashboard</h2>
       <?php include 'User_Dashboard_Sections/Dashboard_Home_Section/dashboard_home.php'; ?>
     </section>
 
@@ -95,10 +109,10 @@
       <?php include 'User_Dashboard_Sections/Support_Section/support_section.php'; ?>
     </section>
 
-    <section id="logout" class="min-h-screen p-8 bg-white shadow-inner">
+    <!-- Logout Section (No additional UI or usage is needed for logout !!)-->
+    <!-- <section id="logout" class="min-h-screen p-8 bg-white shadow-inner">
       <h2 class="text-3xl text-center font-bold text-red-600 mb-4">Logout</h2>
-      <?php include 'User_Dashboard_Sections/logout_section.php'; ?>
-    </section>
+    </section> -->
   </main>
 
   <!-- JavaScript -->
@@ -117,6 +131,30 @@
       });
     });
   </script>
+
+    <!-- SweetAlert2 for Logout Confirmation js Logic -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+  function confirmLogout() {
+    Swal.fire({
+      title: 'Are you sure you want to logout?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, logout',
+      cancelButtonText: 'Cancel',
+      color: '#1e1b4b', // Darker text color to contrast well ..
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // If user clicks "Yes", redirect to logout process php file
+        window.location.href = '/ProjectIII/PHP_Files/user_Dashboard_Sections/logout_process.php';
+      }
+      // If canceled, do nothing (stay on the dashboard page.......)
+    });
+  }
+</script>
+
 </body>
 </html>
 
