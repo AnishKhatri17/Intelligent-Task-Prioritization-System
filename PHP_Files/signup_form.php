@@ -9,6 +9,30 @@
   <title>Sign Up - IntelliTask</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <!-- jQuery (required for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<style>
+  /* css for timezone selection */
+  .select2-container--default .select2-selection--single {
+    height: 2.75rem; /* match Tailwind input height */
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 2rem;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 2.5rem;
+    right: 10px;
+  }
+</style>
+
 </head>
 <body class="bg-gradient-to-br from-indigo-50 to-white min-h-screen flex items-center justify-center">
 
@@ -59,15 +83,23 @@
           <option value="Asia/Dubai">Asia/Dubai (GMT+4)</option>
           <option value="Asia/Tokyo">Asia/Tokyo (GMT+9)</option>
           <option value="Asia/Singapore">Asia/Singapore (GMT+8)</option>
+          <option value="Asia/Shanghai">Asia/Shanghai (GMT+8)</option>
+          <option value="Asia/Jakarta">Asia/Jakarta (GMT+7)</option>
           <option value="Europe/London">Europe/London (GMT+0)</option>
           <option value="Europe/Berlin">Europe/Berlin (GMT+1)</option>
           <option value="Europe/Moscow">Europe/Moscow (GMT+3)</option>
+          <option value="Europe/Paris">Europe/Paris (GMT+1)</option>
           <option value="Africa/Nairobi">Africa/Nairobi (GMT+3)</option>
+          <option value="Africa/Johannesburg">Africa/Johannesburg (GMT+2)</option>
           <option value="America/New_York">America/New_York (GMT-5)</option>
           <option value="America/Chicago">America/Chicago (GMT-6)</option>
           <option value="America/Los_Angeles">America/Los_Angeles (GMT-8)</option>
+          <option value="America/Toronto">America/Toronto (GMT-5)</option>
+          <option value="America/Vancouver">America/Vancouver (GMT-8)</option>
           <option value="America/Sao_Paulo">America/Sao_Paulo (GMT-3)</option>
           <option value="Australia/Sydney">Australia/Sydney (GMT+10)</option>
+          <option value="Pacific/Auckland">Pacific/Auckland (GMT+12)</option>
+
         </select>
       </div>
 
@@ -150,5 +182,23 @@
     }
   </script>
 
+  <!-- Select To for Time Zone Selection -->
+<script>
+  $(document).ready(function() {
+    $('#timezone').select2({
+      placeholder: "Select your time zone",
+      allowClear: true,
+      width: '100%'
+    });
+
+    $('#timezone').on('select2:open', function() {
+      // Select the search box input within the dropdown
+      let searchField = document.querySelector('.select2-container--open .select2-search__field');
+      if (searchField) {
+        searchField.focus();
+      }
+    });
+  });
+</script>
 </body>
 </html>
